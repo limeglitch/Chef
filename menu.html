@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Donga Bites – Rokn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#0b0f0d;
+  --card:#141a17;
+  --gold:#d4af37;
+  --green:#1f7a4d;
+  --text:#eee;
+}
+body{
+  margin:0;
+  font-family:Tahoma,Arial;
+  background:var(--bg);
+  color:var(--text);
+}
+header{
+  padding:80px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#0f2e23,#1f7a4d);
+}
+header h1{color:var(--gold);margin:0;font-size:44px}
+header p{opacity:.9}
+
+.lang{
+  position:fixed;
+  left:15px;
+  top:15px;
+  background:var(--gold);
+  color:#000;
+  border:none;
+  padding:10px 18px;
+  border-radius:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+h2{
+  color:var(--gold);
+  border-bottom:2px solid var(--green);
+  padding-bottom:8px;
+  margin-bottom:30px;
+}
+
+.card{
+  background:var(--card);
+  padding:22px;
+  border-radius:18px;
+  margin-bottom:20px;
+  box-shadow:0 6px 25px rgba(0,0,0,.5);
+}
+
+.meal{
+  display:flex;
+  gap:20px;
+}
+.meal img{
+  width:220px;
+  border-radius:14px;
+}
+
+.price{color:#2ecc71;font-weight:bold}
+
+ul{margin:0;padding-right:18px}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:18px;
+}
+.gallery img{width:100%;border-radius:16px}
+
+.contact{text-align:center}
+.contact a{
+  display:inline-block;
+  margin:12px;
+  padding:16px 36px;
+  border-radius:40px;
+  font-weight:bold;
+  text-decoration:none;
+}
+.whatsapp{background:#25d366;color:#000}
+.call{background:var(--gold);color:#000}
+
+@media(max-width:768px){
+  .meal{flex-direction:column;text-align:center}
+  .meal img{width:100%}
+}
+</style>
+</head>
+<body>
+
+<button class="lang" onclick="toggleLang()">AR / EN</button>
+
+<header>
+  <h1>Donga Bites – Rokn</h1>
+  <p id="tag">أكل بيتي بطعم مختلف</p>
+</header>
+
+<!-- ================== التعاقدات ================== -->
+<section>
+<h2>منيو التعاقدات – 95 جنيه</h2>
+
+<div class="card meal">
+<img src="https://i.postimg.cc/sxvpv7Ks/file-0000000029047246a08076edea87110d.png">
+<div>
+<b>وجبة فراخ فرن</b>
+<div class="price">95 جنيه</div>
+<ul>
+<li>ورك فرخة</li><li>بطاطس فرن</li><li>أرز</li><li>سلطة</li><li>طحينة</li>
+</ul>
+</div>
+</div>
+
+<div class="card meal">
+<img src="https://i.postimg.cc/ncmRH9zR/file-000000009a3871f484b9621354aa1819.png">
+<div>
+<b>وجبة كفتة فرن</b>
+<div class="price">95 جنيه</div>
+<ul>
+<li>4 صوابع كفتة</li><li>أرز</li><li>سلطة</li><li>طحينة</li>
+</ul>
+</div>
+</div>
+
+<div class="card meal">
+<img src="https://i.postimg.cc/MGLVMt31/file-00000000b3b87246b4cad3df0597f783.png">
+<div>
+<b>وجبة بانيه</b>
+<div class="price">95 جنيه</div>
+<ul>
+<li>2 قطعة بانيه</li><li>مكرونة</li><li>مخلل</li>
+</ul>
+</div>
+</div>
+
+<div class="card meal">
+<img src="https://i.postimg.cc/zGbJDjWN/file-00000000860871f4a99ef87dd3b54cc7.png">
+<div>
+<b>وجبة شاورما فراخ</b>
+<div class="price">95 جنيه</div>
+<ul>
+<li>ربع شاورما</li><li>أرز</li><li>مخلل</li>
+</ul>
+</div>
+</div>
+
+<div class="card meal">
+<img src="https://i.postimg.cc/4xzS1HR4/file-00000000e9207246af8b6abe291dec85.png">
+<div>
+<b>وجبة بانيه جريل</b>
+<div class="price">95 جنيه</div>
+<ul>
+<li>2 قطعة بانيه</li><li>مكرونة</li><li>مخلل</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- ================== الفراخ واللحمة ================== -->
+<section>
+<h2>الوجبات الرئيسية</h2>
+<div class="card"><b>الفراخ:</b> ورك فرخة + بطاطس فرن + أرز أبيض + سلطة + طحينة</div>
+<div class="card"><b>اللحمة:</b> قطع لحم فرن + خضار + أرز + سلطة + طحينة</div>
+</section>
+
+<!-- ================== السلطات ================== -->
+<section>
+<h2>السلطات</h2>
+<div class="card"><b>Chicken Caesar Salad</b><br>تشكين جريل + خس كابوتشا + بارميجان + كروتنز</div>
+<div class="card"><b>Chicken Mushroom Salad</b><br>تشكين جريل + مشروم + خضار + Honey Mustard</div>
+<div class="card"><b>Gold Cuts Salad</b><br>تشكين جريل + بيف مدخن + تركي مدخن + Ranch</div>
+</section>
+
+<!-- ================== الباستا ================== -->
+<section>
+<h2>الباستا</h2>
+<div class="card">Chicken Pesto Pasta</div>
+<div class="card">Chicken Cajun Pasta</div>
+<div class="card">Chicken Piccata + أرز أبيض</div>
+</section>
+
+<!-- ================== الأسماك ================== -->
+<section>
+<h2>الأسماك</h2>
+<div class="card">سمك بلدي + طحينة</div>
+<div class="card">فيليه + 2 سمكة مكرونة بلدي + أرز سمك + سلطة</div>
+<div class="card">2 فيليه + 2 مكرونة بلدي + 4 جمبري كبير + شوربة سي فود</div>
+</section>
+
+<!-- ================== الحلويات ================== -->
+<section>
+<h2>الحلويات</h2>
+<div class="card">تشيز كيك سادة</div>
+<div class="card">تشيز كيك توت</div>
+<div class="card">تشيز كيك فراولة</div>
+<div class="card">تيراميسو</div>
+<div class="card">مولتن كيك</div>
+<div class="card">براوني</div>
+</section>
+
+<!-- ================== الحلويات الشرقية ================== -->
+<section>
+<h2>الحلويات الشرقية</h2>
+<div class="card">صينية بسبوسة (سادة / بندق / قشطة / لوتس)</div>
+<div class="card">صينية جلاش سادة</div>
+<div class="card">تارت تشيز كيك توت</div>
+<div class="card">تارت تشيز كيك فراولة</div>
+</section>
+
+<!-- ================== منيو الخير ================== -->
+<section>
+<h2>منيو الخير – 75 جنيه</h2>
+<div class="card">فراخ فرن</div>
+<div class="card">كفتة</div>
+<div class="card">كبدة ردة</div>
+<div class="card">فراخ بانيه</div>
+<div class="card"><b>أقل كمية: 100 وجبة</b></div>
+</section>
+
+<!-- ================== صور ================== -->
+<section>
+<h2>صور من شغلنا</h2>
+<div class="gallery">
+<img src="https://i.postimg.cc/MnJfPxCn/Whats-App-Image-2026-01-05-at-4-33-36-PM.jpg">
+<img src="https://i.postimg.cc/D8XbPmMZ/Whats-App-Image-2026-01-05-at-4-33-36-PM-(1).jpg">
+<img src="https://i.postimg.cc/Hr18ZHqj/Whats-App-Image-2026-01-05-at-4-33-37-PM.jpg">
+<img src="https://i.postimg.cc/SnbYTqBs/Whats-App-Image-2026-01-05-at-4-33-37-PM-(1).jpg">
+</div>
+</section>
+
+<!-- ================== التواصل ================== -->
+<section class="contact">
+<h2>تواصل معنا</h2>
+<a class="whatsapp" href="https://wa.me/201036261600">WhatsApp</a>
+<a class="call" href="tel:01036261600">Call Now</a>
+</section>
+
+<script>
+let ar=true;
+function toggleLang(){
+  ar=!ar;
+  document.getElementById("tag").innerText =
+    ar ? "أكل بيتي بطعم مختلف" : "Home Made Food · Premium Catering";
+}
+</script>
+
+</body>
+  </html>
